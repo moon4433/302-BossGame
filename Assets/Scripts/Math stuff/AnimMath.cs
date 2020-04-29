@@ -18,6 +18,12 @@ public class AnimMath
         return Quaternion.Lerp(min, max, p);
     }
 
+    public static float Map(float v, float min1, float max1, float min2, float max2)
+    {
+        float p = (v - min1) / (max1 - min1);
+        return Lerp(min2, max2, p);
+    }
+
     public static Vector3 QuadraticBezier(Vector3 a, Vector3 b, Vector3 c, float p)
     {
         Vector3 p1 = Lerp(a, b, p);
